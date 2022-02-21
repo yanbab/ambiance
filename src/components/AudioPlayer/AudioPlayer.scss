@@ -1,0 +1,29 @@
+@import '/src/styles/variables.scss';
+
+.AudioPlayer {
+
+  display: flex;
+  align-items: center;
+  padding: .25rem 1rem 0 .25rem;
+
+  .AudioPlayer-details {
+    flex: 1;
+    padding: .25rem;
+  }
+
+  input[type=range] {
+    width: 100%;
+    cursor: pointer;
+    margin-top: .5rem;
+  }
+
+  img {
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+    padding: .25em .5rem .25rem .25rem;
+  }
+
+  &.AudioPlayer--muted img  {
+    filter: none;
+  }
+
+}

@@ -1,0 +1,42 @@
+@import './variables.scss';
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: auto;
+  font-family: sans-serif;
+  user-select: none;
+  cursor: default;
+  background: $color_bg;
+  color: $color;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 24px;
+  margin: .25rem;
+}
+
+h2 {
+  font-size: 75%;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity: .5;
+  margin:  2em 0 .75em;
+  letter-spacing: 1px;
+}
+
+small {
+  display: block;;
+  font-size: 14px;
+  font-weight: normal;
+  opacity: .54;
+}
+
+button {
+  border-radius: $radius/2;
+  border: none;
+  background: $color_bg_button;
+  padding: .25em 0
+}

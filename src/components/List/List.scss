@@ -1,0 +1,19 @@
+@import '/src/styles/variables.scss';
+
+.List {
+
+  .List-items {
+    background: $color_bg_view;
+    border-radius: $radius;
+    border: $border;
+    
+    & > * {
+      border-bottom: $border;
+    }
+
+    & > *:last-child {
+      border-bottom: none;
+    }
+  }
+  
+}
