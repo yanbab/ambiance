@@ -65,7 +65,7 @@
   
   .menu-popover > *:hover {
     background: rgba(0,0,0,.075);
-    border-radius: $radius / 2;
+    border-radius: calc($radius / 2);
   }
   
 

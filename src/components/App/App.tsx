@@ -4,7 +4,7 @@ import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
 import { Icon } from '../Icon/Icon';
 import { List } from '../List/List';
 
-import AudioProvider from '../../providers/AudioProvider';
+
 import Storage from '../../providers/Storage';
 import messages from '../../locales/fr.json';
 import './App.scss';
@@ -63,7 +63,7 @@ export const App = (props: any) => {
 
   const [ playing, setPlaying ] = useState(true);
   const [ volume, setVolume ] = useState("50");
-  const [ menuOpen, setMenuOpen ] = useState(false);
+  // const [ menuOpen, setMenuOpen ] = useState(false);
 
   const categories = [ "Nature", "Travel", "Indoors", "Noise" ];
   const iconSize = 30;
@@ -100,7 +100,7 @@ export const App = (props: any) => {
                 <Icon size={iconSize} name={getVolumeIcon(volume)} />
                 <input type="range" value={volume} onChange={event => setVolume(event.target.value)} />
               </div>
-              <a href="#">{_("About")}</a>
+              <a href="#about">{_("About")}</a>
             </div>
           </div>
         </nav>
@@ -108,7 +108,7 @@ export const App = (props: any) => {
       <main className="clamp">
         {categories.map(category => 
           <List title={_(category)}>
-            {tracks.map(track => (track.category == category)
+            {tracks.map(track => (track.category === category)
               ? <AudioPlayer name={_(track.name)} icon={track.icon} src={track.src} volume="0" onVolumeChange={handleVolumeChange} /> 
               : <></>
             )}

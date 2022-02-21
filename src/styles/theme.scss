@@ -35,7 +35,7 @@ small {
 }
 
 button {
-  border-radius: $radius/2;
+  border-radius: calc($radius / 2);
   border: none;
   background: $color_bg_button;
   padding: .25em 0

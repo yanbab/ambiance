@@ -15,7 +15,7 @@ export const AudioPlayer = (props: any) => {
     setVolume(vol);
     if(audioRef && audioRef.current) {
       audioRef.current.volume = vol;
-      if(vol == 0) audioRef.current.pause();
+      if(vol === 0) audioRef.current.pause();
       else audioRef.current.play();
     }
     props.onVolumeChange && props.onVolumeChange(props.src, event.target.value);
@@ -23,7 +23,7 @@ export const AudioPlayer = (props: any) => {
   
   return (
     <div className={"AudioPlayer " + className }>
-      <img width={iconSize} height={iconSize} src={require('../../assets/icons/' + props.icon)}/>
+      <img alt="" width={iconSize} height={iconSize} src={require('../../assets/icons/' + props.icon)}/>
       <div className="AudioPlayer-details">        
         {props.name} 
         <input type="range" min="0" max="100" value={volume} onChange={handleVolume} />
