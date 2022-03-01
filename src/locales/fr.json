@@ -7,8 +7,6 @@
   "Travel": "Voyage",
   "Indoors": "Intérieur",
   "Noise": "Bruit",
-  "Custom sounds": "Personalisé", 
-  "Add custom sounds...": "Ajouter un son personalisé", 
   "Wind": "Vent",
   "Waves": "Vagues",
   "Stream": "Ruisseau",
@@ -20,5 +18,10 @@
   "Coffee shop": "Café",
   "Fireplace": "Cheminée",
   "Pink noise": "Bruit rose",
-  "White noise": "Bruit blanc"
+  "White noise": "Bruit blanc",
+  "Custom sounds": "Sons personalisés", 
+  "Add custom sounds...": "Ajouter un son personalisé",
+  "% saved": "%s enregistré",
+  "%s deleted": "%s supprimé",
+  "%s is ready for offline use": "%s est prêt à être utilisé sans réseau"
 }

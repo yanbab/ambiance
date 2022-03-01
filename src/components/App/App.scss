@@ -1,4 +1,5 @@
 @import '/src/styles/variables.scss';
+@import '/src/styles/theme.scss';
 
 .App {
 
@@ -11,20 +12,22 @@
     nav {
       display: flex;
       align-items: center;    
-      // justify-content: center;
       padding: 0 1em;
     }
 
     h1 {
       flex: 1;
       text-align: center;
+
+      span {
+        opacity: .7;
+      }
+
     }
 
   }
-
-  .clamp {
-    max-width: $max_width;
-    margin: auto;
+  main {
+    padding: 1em
   }
 
   .FileUpload {
@@ -33,42 +36,13 @@
 
   .Icon {
     cursor: pointer;
+    opacity: .84;
   }
 
-
-  .menu {
-    position: relative
-  }
-  .menu-popover {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    background: $color_bg_view;
-    border: $border;
-    border-radius: $radius;
-    padding: .5rem;
-    white-space: nowrap;
-    right: -.5em;
-    top: 2.5em;
-    display: none;
-  }
-  .menu--open .menu-popover {
-    display: block;
-  }
-
-  .menu-popover > * {
-    padding: .25rem;
-    text-decoration: none;
-    color: inherit;
-    flex: 1;
+  
+  .clamp {
+    max-width: $max_width;
+    margin: auto;
   }
   
-  .menu-popover > *:hover {
-    background: rgba(0,0,0,.075);
-    border-radius: calc($radius / 2);
-  }
-  
-
 }
-
-

@@ -1,0 +1,51 @@
+@import '/src/styles/variables.scss';
+
+.Details {
+
+  details {
+    border-radius: calc($radius / 2);
+    overflow: hidden;
+
+    line-height: 1.5;
+    letter-spacing: 1px;
+  //  background: rgba(0,0,0,.2);
+  }
+  
+  summary {
+    padding: 0rem;
+    display: block;
+    padding-left: 2.2rem;
+    position: relative;
+    cursor: pointer;
+  //  background: rgba(0,0,0,.2);
+  }
+  
+  .content {
+    display: inline;
+  }
+
+  summary:before {
+    content: '';
+    border-width: .4rem;
+    border-style: solid;
+    border-color: transparent transparent transparent #000;
+    position: absolute;
+    top: .3rem;
+    left: 1rem;
+    transform: rotate(0);
+    transform-origin: .2rem 50%;
+    transition: .15s transform ease;
+  }
+  
+  /* THE MAGIC 🧙‍♀️ */
+  details[open] > summary:before {
+    transform: rotate(90deg);
+  }
+  
+  
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+  
+  
+}

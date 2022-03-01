@@ -23,7 +23,7 @@ export const AudioPlayer = (props: any) => {
   
   return (
     <div className={"AudioPlayer " + className }>
-      <img alt="" width={iconSize} height={iconSize} src={require('../../assets/icons/' + props.icon)}/>
+      <img alt="" draggable="false" width={iconSize} height={iconSize} src={require('../../assets/icons/' + props.icon)}/>
       <div className="AudioPlayer-details">        
         {props.name} 
         <input type="range" min="0" max="100" value={volume} onChange={handleVolume} />

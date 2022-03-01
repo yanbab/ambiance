@@ -1,0 +1,67 @@
+@import '/src/styles/variables.scss';
+@import '/src/styles/theme.scss';
+
+.menu {
+  position: absolute;
+  background: $color_bg_view;
+  border: $border;
+  border-radius: $radius;
+  padding: .5rem;
+  white-space: nowrap;
+}
+
+.menu {
+  
+  /* FIXME hardcoded value */
+  width: 280px; 
+  right: 242px;
+  top: 67px;
+
+  box-shadow: $box-shadow;
+
+  & {
+    display: none;
+  }
+
+  &.menu--open  {
+    display: block;
+  }
+
+}
+
+ .menu >*, .menu a {
+  padding: .25rem .5rem;
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
+  display: block
+}
+
+.menu  a:hover {
+  background: $color_bg;
+  border-radius: calc($radius / 2);
+}
+
+.menu input[type=text] {
+  background: $color_bg;
+  border: none;
+  outline: 0;
+  padding: .25rem .5rem;
+  margin-left: 1rem;
+  &:hover {
+    background: darken($color_bg, 4);
+  }
+  
+}
+
+.grayscale {
+  filter: grayscale(1)  brightness(40%)
+}
+
+.slider {
+  display: flex;
+
+  input {
+    width: 100%;
+  }
+}

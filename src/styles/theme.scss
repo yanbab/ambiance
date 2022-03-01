@@ -3,13 +3,14 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: auto;
   font-family: sans-serif;
-  user-select: none;
-  cursor: default;
   background: $color_bg;
   color: $color;
+  user-select: none;
+  cursor: default;
 }
 
 h1 {
@@ -23,20 +24,69 @@ h2 {
   font-weight: bold;
   text-transform: uppercase;
   opacity: .5;
-  margin:  2em 0 .75em;
   letter-spacing: 1px;
+  margin: 0;
 }
 
 small {
   display: block;;
   font-size: 14px;
   font-weight: normal;
-  opacity: .54;
+  opacity: .65;
 }
 
 button {
   border-radius: calc($radius / 2);
+  border: $border;
+  color: inherit;
+  background: none;
+  padding: .5rem 0;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 43px;
+  max-height: 43px;
+
+  &:hover {
+    // background: darken($color_bg, 1);
+  }
+
+  &:active {
+    background: darken($color_bg, 1);
+  }
+
+}
+
+hr {
+  height: 0;
   border: none;
-  background: $color_bg_button;
-  padding: .25em 0
+  border-top: $border;
+}
+
+kbd {
+  background-color: #fafafa;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  box-shadow:$box-shadow;
+  opacity: .8;
+  display: inline-block;
+  font-size: .85em;
+  font-weight: 700;
+  line-height: 1;
+  padding: 2px 4px;
+}
+
+.badge {
+  $icon-size: 24px;
+  background: rgba(0, 0, 0, .4);
+  border-radius: calc($icon-size / 2);
+  padding: 0 calc($icon-size / 3);
+  color:white;
+  display:inline-block;
+  min-width: $icon-size;
+  min-height: $icon-size;
+  line-height: $icon-size;
+  text-align: center;
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-right: .5rem;
 }
