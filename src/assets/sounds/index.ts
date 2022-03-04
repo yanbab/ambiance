@@ -1,4 +1,4 @@
-export default [
+const sounds = [
   { category: "Nature", name: "Rain", icon: "rain.svg", src: "rain.mp3" },
   { category: "Nature", name: "Storm", icon: "storm.svg", src: "storm.mp3" },
   { category: "Nature", name: "Wind", icon: "wind.svg", src: "wind.mp3" },
@@ -14,3 +14,5 @@ export default [
   { category: "Noise", name: "Pink noise", icon: "pink-noise.svg", src: "pink-noise.mp3" },
   { category: "Noise", name: "White noise", icon: "white-noise.svg", src: "white-noise.mp3" },
 ];
+
+export default sounds;

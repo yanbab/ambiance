@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 
-import { AppMenu } from '../AppMenu/AppMenu';
-import notify, { Notification } from '../Notification/Notification'
+//import { AppMenu } from '../AppMenu/AppMenu';
+import  { Notification } from '../Notification/Notification'
 
 import { AudioPlayer } from '../AudioPlayer/AudioPlayer';
 import { List } from '../List/List';
 
-import Store from '../../services/Store';
+//import Store from '../../services/Store';
 import _ from '../../services/i18n';
 
 import './App.scss';
@@ -16,8 +16,8 @@ import tracks from '../../assets/sounds';
 
 export const App = () => {
 
-  const [ playing, setPlaying ] = useState(true);
-  const volumes:any = {};
+  //const [ playing, setPlaying ] = useState(true);
+  //const volumes:any = {};
 
   useEffect(() => {
     //console.log(soundsStore.get("wind.mp3"))
@@ -25,7 +25,7 @@ export const App = () => {
   }, []);
 
   const categories = [ "Nature", "Travel", "Indoors", "Noise" ];
-  const soundsStore = new Store("ambiance_sounds");
+  //const soundsStore = new Store("ambiance_sounds");
  
   const handleVolumeChange = (track: string, volume: number | string) => {
     console.log('changed', track, volume);
