@@ -9,11 +9,16 @@ class Store {
   }
 
   get(key: string, defaultValue?: any) {
-    return JSON.parse(window.localStorage[key]);
+    const saved = localStorage.getItem("name");
+
+    const data = JSON.parse(saved + "");
+    return data[key] || defaultValue;
   }
 
   set(key: string, value: any) {
-    window.localStorage[key] = JSON.stringify(value);
+    const data = JSON.parse(window.localStorage[this.prefix]);
+    data[key] = value;
+    window.localStorage[this.prefix] = JSON.stringify(data);
   }
 
 }

@@ -30,24 +30,25 @@ export const AppMenu = (props: any) => {
       <button onClick={()=> setMenuIsOpen(!menuIsOpen)}>{props.label}</button>
       <div className={"menu" + (menuIsOpen ? " menu--open": "")}  >
         <div className="slider">
-          <span className="grayscale">{getVolumeIcon(volume)}</span>
+          {/*  <span className="grayscale">{getVolumeIcon(volume)}</span>  */}
           <input type="range" value={volume} onChange={event => setVolume(event.target.value)} />
         </div>
-        <Details summary={_("Save ambiance")} >
-          <label>
-            <input type="text" autoFocus placeholder={_("My custom ambiance")} />
-          </label>
+        <hr/>
+        {/* 
+          <Details summary={_("Save ambiance")} >
+            <label>
+              <input type="text" autoFocus placeholder={_("My custom ambiance")} />
+            </label>
+            </Details>
+          <Details summary={_("Save ambiance")} >
+            <a href="#h">Ambiance #1</a>
+            <a href="#h">Ambiance #2</a>
           </Details>
-         
-        <Details summary={_("Save ambiance")} >
-          
-          <a href="#h">Ambiance #1</a>
-          <a href="#h">Ambiance #2</a>
-        </Details>
-        
+        */}
         <a href="https://github.com/yanbab/ambiance#readme" target="_blank" rel="noreferrer">
-          <span className="badge">i</span>
+          
           {_("About")}
+          {/* <kbd>Ctrl</kbd> <kbd>A</kbd> */}
         </a>
       </div>
     </span>

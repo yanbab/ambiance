@@ -10,11 +10,11 @@ export const AudioPlayer = (props: any) => {
   const audioFile = require('../../assets/sounds/' + props.src);
 
   const handleVolume = (event: any) => {
-    let vol = event.target.value / 100;
+    let vol = event.target.value ;
     console.log(vol)
     setVolume(vol);
     if(audioRef && audioRef.current) {
-      audioRef.current.volume = vol;
+      audioRef.current.volume = event.target.value / 100;
       if(vol === 0) audioRef.current.pause();
       else audioRef.current.play();
     }
@@ -25,7 +25,7 @@ export const AudioPlayer = (props: any) => {
     <div className={"AudioPlayer " + className }>
       <img alt="" draggable="false" width={iconSize} height={iconSize} src={require('../../assets/icons/' + props.icon)}/>
       <div className="AudioPlayer-details">        
-        {props.name} 
+        {props.name}
         <input type="range" min="0" max="100" value={volume} onChange={handleVolume} />
         <audio ref={audioRef}  loop  src={audioFile}/>
       </div>
